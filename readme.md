@@ -12,12 +12,12 @@ QCPY is an open-source Python library designed for simulating and visualizing qu
 ## 📖 Documentation
 This README provides a high-level overview. For in-depth documentation, visit the following sections:
 
-- [Introduction & Prerequisites](docs/prerequisites.md)
-- [Installation Guide](docs/installation.md)
-- [Usage Guide](docs/usage.md)
-- [Quantum Gates Reference](docs/gates.md)
-- [API Documentation](docs/api_reference.md)
-- [Visualization Guide](docs/visualization.md)
+- [Introduction & Prerequisites](prerequisites.md)
+- [Installation Guide](installation.md)
+- [Usage Guide](usage.md)
+- [Quantum Gates Reference](gates.md)
+- [API Documentation](api_reference.md)
+- [Visualization Guide](visualization.md)
 
 ---
 
