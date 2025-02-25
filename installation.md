@@ -1,7 +1,7 @@
 # Installation Guide
 
 ## Prerequisites
-Before installing QCPY, ensure you have the following:
+Before installing QCPY, make sure that you have the following:
 - Python 3.7 or later
 - `pip` (Python package manager)
 - (Optional) CUDA-enabled GPU for GPU acceleration
@@ -13,7 +13,7 @@ You can install QCPY via `pip`:
 pip install qcpydev
 ```
 
-To verify the installation, run the following in Python:
+To check that the installation worked, run the following in Python:
 
 ```python
 import qcpy
