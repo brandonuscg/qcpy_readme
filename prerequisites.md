@@ -1,5 +1,3 @@
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
 # Introduction & Prerequisites
 
 ## What is Quantum Computing?
@@ -17,52 +15,53 @@ Quantum gates manipulate qubits in ways that enable quantum algorithms. Here are
 ### **Pauli Gates**
 - **X (Pauli-X)**: Equivalent to a NOT gate, flipping |0⟩ to |1⟩ and vice versa.
 
-  Matrix representation:
-  \[
-  X = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}
-  \]
-
-  Acting on a qubit state:
-  \[
-  X |0\rangle = |1\rangle, \quad X |1\rangle = |0\rangle
-  \]
+  **Matrix representation:**
+  ```
+  X = [0  1]
+      [1  0]
+  ```
+  **Effect on a qubit state:**
+  ```
+  X |0⟩ = |1⟩, X |1⟩ = |0⟩
+  ```
 
 - **Y (Pauli-Y)**: Introduces a phase shift and flips the qubit.
 
-  Matrix representation:
-  \[
-  Y = \begin{bmatrix} 0 & -i \\ i & 0 \end{bmatrix}
-  \]
-
-  Acting on a qubit state:
-  \[
-  Y |0\rangle = i|1\rangle, \quad Y |1\rangle = -i|0\rangle
-  \]
+  **Matrix representation:**
+  ```
+  Y = [ 0 -i]
+      [ i  0]
+  ```
+  **Effect on a qubit state:**
+  ```
+  Y |0⟩ = i|1⟩, Y |1⟩ = -i|0⟩
+  ```
 
 - **Z (Pauli-Z)**: Introduces a phase shift without flipping the qubit.
 
-  Matrix representation:
-  \[
-  Z = \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}
-  \]
-
-  Acting on a qubit state:
-  \[
-  Z |0\rangle = |0\rangle, \quad Z |1\rangle = -|1\rangle
-  \]
+  **Matrix representation:**
+  ```
+  Z = [1  0]
+      [0 -1]
+  ```
+  **Effect on a qubit state:**
+  ```
+  Z |0⟩ = |0⟩, Z |1⟩ = -|1⟩
+  ```
 
 ### **Hadamard Gate (H)**
 Creates superposition by transforming |0⟩ into an equal mix of |0⟩ and |1⟩:
 
-  Matrix representation:
-  \[
-  H = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
-  \]
-
-  Acting on a qubit state:
-  \[
-  H |0\rangle = \frac{|0\rangle + |1\rangle}{\sqrt{2}}, \quad H |1\rangle = \frac{|0\rangle - |1\rangle}{\sqrt{2}}
-  \]
+  **Matrix representation:**
+  ```
+  H = (1/sqrt(2)) * [ 1  1]
+                     [ 1 -1]
+  ```
+  **Effect on a qubit state:**
+  ```
+  H |0⟩ = (|0⟩ + |1⟩) / sqrt(2)
+  H |1⟩ = (|0⟩ - |1⟩) / sqrt(2)
+  ```
 
 ```python
 from qcpy import QuantumCircuit
@@ -73,10 +72,13 @@ qc.h(0)
 ### **CNOT Gate (CX)**
 A controlled operation that flips the target qubit if the control qubit is in state |1⟩.
 
-  Matrix representation:
-  \[
-  CX = \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{bmatrix}
-  \]
+  **Matrix representation:**
+  ```
+  CX = [1  0  0  0]
+       [0  1  0  0]
+       [0  0  0  1]
+       [0  0  1  0]
+  ```
 
 ```python
 qc.cx(0, 1)
@@ -85,30 +87,33 @@ qc.cx(0, 1)
 ### **Phase Gates**
 - **S Gate**: Introduces a 90-degree phase shift.
 
-  Matrix representation:
-  \[
-  S = \begin{bmatrix} 1 & 0 \\ 0 & i \end{bmatrix}
-  \]
+  **Matrix representation:**
+  ```
+  S = [1  0]
+      [0  i]
+  ```
 
 - **T Gate**: Introduces a 45-degree phase shift.
 
-  Matrix representation:
-  \[
-  T = \begin{bmatrix} 1 & 0 \\ 0 & e^{i\pi/4} \end{bmatrix}
-  \]
+  **Matrix representation:**
+  ```
+  T = [1       0]
+      [0  e^(iπ/4)]
+  ```
 
 ### **Rotation Gates**
 - **RX, RY, RZ**: Rotate the qubit state around the X, Y, and Z axes.
 
-  Matrix representation of RZ:
-  \[
-  RZ(\theta) = \begin{bmatrix} e^{-i\theta/2} & 0 \\ 0 & e^{i\theta/2} \end{bmatrix}
-  \]
-
-  Acting on a qubit:
-  \[
-  RZ(\theta) |0\rangle = e^{-i\theta/2} |0\rangle, \quad RZ(\theta) |1\rangle = e^{i\theta/2} |1\rangle
-  \]
+  **Matrix representation of RZ:**
+  ```
+  RZ(θ) = [e^(-iθ/2)   0]
+          [0   e^(iθ/2)]
+  ```
+  **Effect on a qubit:**
+  ```
+  RZ(θ) |0⟩ = e^(-iθ/2) |0⟩
+  RZ(θ) |1⟩ = e^(iθ/2) |1⟩
+  ```
 
 ## Why Learn Quantum Computing?
 Quantum computing has the potential to revolutionize fields such as cryptography, optimization, machine learning, and materials science. Understanding these principles is essential for working with QCPY and other quantum libraries.
