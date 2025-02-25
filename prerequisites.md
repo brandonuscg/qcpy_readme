@@ -115,7 +115,4 @@ qc.cx(0, 1)
   RZ(θ) |1⟩ = e^(iθ/2) |1⟩
   ```
 
-## Why Learn Quantum Computing?
-Quantum computing has the potential to revolutionize fields such as cryptography, optimization, machine learning, and materials science. Understanding these principles is essential for working with QCPY and other quantum libraries.
-
 For more on quantum gates, see the [Quantum Gates Reference](gates.md).
