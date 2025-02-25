@@ -1,47 +1,99 @@
-# Introduction & Prerequisites
+# QCPY - Quantum Computing for Python
 
-## What is Quantum Computing?
-Quantum computing is a revolutionary field that leverages the principles of quantum mechanics to process information in ways that classical computers cannot. Instead of using classical bits (0 or 1), quantum computers use **qubits**, which can exist in **superposition**—meaning they can represent both 0 and 1 simultaneously.
+QCPY is an open-source Python library designed for simulating and visualizing quantum circuits. It provides an intuitive interface for building quantum algorithms, exploring quantum mechanics concepts, and leveraging GPU acceleration for quantum simulations.
 
-## Understanding Qubits
-A qubit is the fundamental unit of quantum information. Unlike classical bits, qubits take advantage of:
-- **Superposition**: A qubit can be in a state of both 0 and 1 simultaneously.
-- **Entanglement**: Qubits can become correlated, meaning the state of one qubit depends on another, no matter the distance between them.
-- **Measurement**: When measured, a qubit collapses into either a 0 or a 1 with a certain probability.
+## 📌 Features
+- Construct and manipulate quantum circuits
+- Apply quantum gates (Pauli, Hadamard, T, Controlled, etc.)
+- Simulate quantum states and amplitudes
+- GPU-accelerated quantum computations
+- Visualize circuits with Q-spheres, Bloch spheres, and state vector diagrams
 
-## Quantum Gates and Operations
-Quantum gates manipulate qubits in ways that enable quantum algorithms. Here are some fundamental quantum gates:
+## 📖 Documentation
+This README provides a high-level overview. For in-depth documentation, visit the following sections:
 
-### **Pauli Gates**
-- **X (Pauli-X)**: Equivalent to a NOT gate, flipping |0⟩ to |1⟩ and vice versa.
-- **Y (Pauli-Y)**: Introduces a phase shift and flips the qubit.
-- **Z (Pauli-Z)**: Introduces a phase shift without flipping the qubit.
+- [Introduction & Prerequisites](docs/prerequisites.md)
+- [Installation Guide](docs/installation.md)
+- [Usage Guide](docs/usage.md)
+- [Quantum Gates Reference](docs/gates.md)
+- [API Documentation](docs/api_reference.md)
+- [Visualization Guide](docs/visualization.md)
 
-### **Hadamard Gate (H)**
-Creates superposition by transforming |0⟩ into an equal mix of |0⟩ and |1⟩:
+---
+
+## 🛠️ Installation
+
+To install QCPY, use `pip`:
+
+```sh
+pip install qcpydev
+```
+
+To use QCPY in your Python project, import the library:
+
+```python
+from qcpy import quantumcircuit
+```
+
+For more setup details, visit the [Installation Guide](docs/installation.md).
+
+---
+
+## 🚀 Getting Started
+
+### Creating a Quantum Circuit
+
+You can create a simple quantum circuit using the `QuantumCircuit` class:
 
 ```python
 from qcpy import QuantumCircuit
-qc = QuantumCircuit(1)
-qc.h(0)
+
+qc = QuantumCircuit(qubits=3)
+qc.h(0)  # Apply Hadamard gate to qubit 0
+qc.cx(0, 1)  # Apply CNOT gate with control 0 and target 1
+print(qc.state)  # Print quantum state
 ```
 
-### **CNOT Gate (CX)**
-A controlled operation that flips the target qubit if the control qubit is in state |1⟩.
+For advanced examples, see the [Usage Guide](docs/usage.md).
+
+---
+
+## 📚 Learning Quantum Computing
+
+New to quantum computing? Start with the [Introduction & Prerequisites](docs/prerequisites.md), covering:
+- What are qubits?
+- Basic quantum gates (Hadamard, Pauli, CNOT, etc.)
+- Concepts of superposition and entanglement
+
+Explore the **[Quantum Gates Reference](docs/gates.md)** for a deeper understanding.
+
+---
+
+## 🎨 Visualizing Quantum Circuits
+
+QCPY includes built-in visualization tools:
 
 ```python
-qc.cx(0, 1)
+from qcpy import QuantumCircuit, visualize
+
+qc = QuantumCircuit(qubits=3)
+qc.h([0, 1, 2])
+
+visualize.qsphere(qc)  # Display Q-Sphere representation
 ```
 
-### **Phase Gates**
-- **S Gate**: Introduces a 90-degree phase shift.
-- **T Gate**: Introduces a 45-degree phase shift.
+More visualization methods are detailed in the [Visualization Guide](docs/visualization.md).
 
-### **Rotation Gates**
-- **RX, RY, RZ**: Rotate the qubit state around the X, Y, and Z axes.
+---
 
-## Why Learn Quantum Computing?
-Quantum computing has the potential to revolutionize fields such as cryptography, optimization, machine learning, and materials science. Understanding these principles is essential for working with QCPY and other quantum libraries.
+## 🤝 Contributions
 
-For more on quantum gates, see the [Quantum Gates Reference](gates.md).
+We welcome contributions! See our [Contributing Guide](CONTRIBUTING.md) for more details.
 
+For questions, discussions, or support, [join our community on Discord](https://discord.gg/jWxYXFzraK).
+
+---
+
+## 📜 License
+
+QCPY is released under the MIT License. See the [LICENSE](LICENSE) file for details.
