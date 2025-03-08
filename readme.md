@@ -18,6 +18,7 @@ This README provides a high-level overview. For in-depth documentation, visit th
 - [Quantum Gates Reference](gates.md)
 - [API Documentation](api_reference.md)
 - [Visualization Guide](visualization.md)
+- [Tutorial for First Quantum Circuit](tutorial.md)
 
 ---
 
