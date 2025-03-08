@@ -10,6 +10,10 @@ This tutorial walks you through setting up and running your first quantum circui
 ## Step 1: Setting Up Your Python File
 Create a new Python file, e.g., `my_first_qc.py`, and start by importing QCPY:
 
+```terminal
+nvim my_first_qc.py
+```
+
 ```python
 from qcpy import QuantumCircuit
 ```
