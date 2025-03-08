@@ -35,7 +35,7 @@ To use QCPY in your Python project, import the library:
 from qcpy import quantumcircuit
 ```
 
-For more setup details, visit the [Installation Guide](docs/installation.md).
+For more setup details, visit the [Installation Guide](installation.md).
 
 ---
 
@@ -54,18 +54,18 @@ qc.cx(0, 1)  # Apply CNOT gate with control 0 and target 1
 print(qc.state)  # Print quantum state
 ```
 
-For advanced examples, see the [Usage Guide](docs/usage.md).
+For advanced examples, see the [Usage Guide](usage.md).
 
 ---
 
 ## 📚 Learning Quantum Computing
 
-New to quantum computing? Start with the [Introduction & Prerequisites](docs/prerequisites.md), covering:
+New to quantum computing? Start with the [Introduction & Prerequisites](prerequisites.md), covering:
 - What are qubits?
 - Basic quantum gates (Hadamard, Pauli, CNOT, etc.)
 - Concepts of superposition and entanglement
 
-Explore the **[Quantum Gates Reference](docs/gates.md)** for a deeper understanding.
+Explore the **[Quantum Gates Reference](gates.md)** for a deeper understanding.
 
 ---
 
@@ -82,7 +82,7 @@ qc.h([0, 1, 2])
 visualize.qsphere(qc)  # Display Q-Sphere representation
 ```
 
-More visualization methods are detailed in the [Visualization Guide](docs/visualization.md).
+More visualization methods are detailed in the [Visualization Guide](visualization.md).
 
 ---
 
