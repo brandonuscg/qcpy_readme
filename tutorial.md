@@ -8,11 +8,14 @@ This tutorial walks you through setting up and running your first quantum circui
 4. Measure the circuit.
 
 ## Step 1: Setting Up Your Python File
-Create a new Python file, e.g., `my_first_qc.py`, and start by importing QCPY:
+Create a new Python file, e.g., `my_first_qc.py`, and start by importing QCPY.
+
+In terminal:
 
 ```terminal
-nvim my_first_qc.py
+vim my_first_qc.py
 ```
+In vim:
 
 ```python
 from qcpy import QuantumCircuit
