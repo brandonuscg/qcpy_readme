@@ -13,8 +13,6 @@ qc = QuantumCircuit(qubits=3)
 qc.h(0)
 qc.cx(0, 1)
 qc.cz(1, 2)
-
-visualize.circuit(qc)  # Display the circuit diagram
 ```
 
 ## Q-Sphere Representation
