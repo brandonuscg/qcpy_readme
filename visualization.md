@@ -28,7 +28,7 @@ visualize.qsphere(qc)
 To visualize individual qubits on the Bloch sphere:
 
 ```python
-visualize.bloch(qc, qubit=0)  # Visualize qubit 0
+visualize.bloch(qc)  # Visualizes the bloch sphere
 ```
 
 ## State Vector Representation
