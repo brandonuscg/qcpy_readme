@@ -70,8 +70,8 @@ results = qc.state
 print(results)
 ```
 
-## Expected Outcome
-Running the script should output measurement results, showing a 50/50 probability of measuring `00` or `11` due to entanglement.
+## State Vector
+Running the script should output the state vector, showing a 50/50 probability of measuring `00` or `11` due to entanglement.
 
 Example output:
 ```
