@@ -6,11 +6,14 @@ This tutorial walks you through setting up and running your first quantum circui
 2. Apply a Hadamard gate to the first qubit.
 3. Apply a CNOT gate, using the first qubit as control and the second as target.
 4. Measure the circuit.
+5. Run program
+6. Show probability
+7. Show qsphere
 
 ## Step 1: Setting Up Your Python File
-Create a new Python file, e.g., `my_first_qc.py`, and start by importing QCPY.
+Create a new Python file, e.g., `my_first_qc.py`, and start by importing the qcpy modules we need for building a circuit, measuring it, and visualizing it.
 
-In terminal:
+In terminal, use a text-editor of your choice, I'll be using vim:
 
 ```terminal
 vim my_first_qc.py
@@ -18,14 +21,14 @@ vim my_first_qc.py
 In vim:
 
 ```python
-from qcpy import QuantumCircuit
+from qcpy import quantumcircuit, visualize, measure
 ```
 
 ## Step 2: Creating a Quantum Circuit
 Now, define a quantum circuit with 2 qubits:
 
 ```python
-qc = QuantumCircuit(qubits=2)
+qc = quantumcircuit(qubits=2)
 ```
 
 ## Step 3: Applying Quantum Gates
@@ -45,14 +48,14 @@ qc.cx(0, 1)  # Apply CNOT gate
 To obtain results, add a measurement step:
 
 ```python
-qc.measure()
+measure(qc)
 ```
 
 ## Step 5: Running the Circuit
 Finally, execute the quantum circuit and print the results:
 
 ```python
-results = qc.run(shots=1024)
+results = qc.state
 print(results)
 ```
 
@@ -61,9 +64,64 @@ Running the script should output measurement results, showing a 50/50 probabilit
 
 Example output:
 ```
-{'00': 512, '11': 512}
+[[0.70710677+0.j]
+ [0.        +0.j]
+ [0.        +0.j]
+ [0.70710677+0.j]]
+```
+
+## Step 6: Show probability
+To display the probability statistics, add:
+
+```python
+visualize.probability(qc) 
+```
+
+Example output:
+![probability](screenshots/probabilities.png)
+
+This result can also be saved by adding the parameter ```save=True``` inside of the probability function:
+```python
+visualize.probability(qc, save=True)
+```
+It will save in the directory that you're running your program in.
+
+## Step 7: Show qspere
+To display a 3d interactable qsphere, add:
+
+```python
+visualize.qsphere(qc)
+```
+
+Example output:
+![probability](screenshots/qsphere.png)
+
+Similarly, this can also be saved (though only a .png and not the interactable qsphere) in the current directory:
+```python
+visualize.qsphere(qc, save=True)
 ```
 
 Congratulations! 🎉 You've successfully created and executed your first quantum circuit using QCPY.
 
 For more advanced tutorials, check out the [Usage Guide](usage.md).
+
+Full tutorial code:
+```python
+from qcpy import quantumcircuit, visualize, measure
+
+qc = quantumcircuit(qubits=2)
+
+qc.h(0)
+
+qc.cx(0, 1)
+
+measure(qc)
+
+results = qc.state
+
+print(results)
+
+visualize.probability(qc, save=True)
+
+visualize.qsphere(qc)
+```
