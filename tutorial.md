@@ -97,7 +97,7 @@ visualize.probability(qc, save=True)
 ```
 It will save in the directory that you're running your program in.
 
-## Step 8: Show qspere
+## Step 8: Show qsphere
 To display a 3d interactable qsphere, add:
 
 ```python
