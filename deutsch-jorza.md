@@ -8,7 +8,7 @@ This tutorial will walk you through implementing the Deutsch-Jozsa algorithm usi
 ---
 
 ## Objective
-Classically, you’d need to evaluate \( f(x) \) multiple times to determine whether it's constant or balanced. With the Deutsch-Jozsa algorithm, a quantum circuit can solve this in a single execution.
+Classically, we would need to evaluate \( f(x) \) multiple times to determine whether it's constant or balanced. With the Deutsch-Jozsa algorithm, a quantum circuit can solve this in a single execution.
 
 ---
 
