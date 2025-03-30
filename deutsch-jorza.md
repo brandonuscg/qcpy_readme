@@ -1,14 +1,14 @@
 # Deutsch-Jozsa Algorithm
 
 ## Introduction
-The **Deutsch-Jozsa algorithm** is a foundational quantum algorithm that determines whether a function \( f: \{0,1\}^n \rightarrow \{0,1\} \) is **constant** (returns the same output for all inputs) or **balanced** (returns 0 for exactly half of all inputs and 1 for the other half). It does this exponentially faster than any classical algorithm.
+The **Deutsch-Jozsa algorithm** is a foundational quantum algorithm that determines whether a function `f: {0,1}^n → {0,1}` is **constant** (returns the same output for all inputs) or **balanced** (returns 0 for exactly half of all inputs and 1 for the other half). It does this exponentially faster than any classical algorithm.
 
-In this tutorial, we’ll implement the original **Deutsch algorithm** (for \( n = 1 \)), then describe how this scales into the more general Deutsch-Jozsa algorithm.
+In this tutorial, we’ll implement the original **Deutsch algorithm** (for `n = 1`), then describe how this scales into the more general Deutsch-Jozsa algorithm.
 
 ---
 
 ## Background: The Problem
-Given a black-box function \( f: \{0,1\} \rightarrow \{0,1\} \), we want to determine whether it's **constant** or **balanced**. There are only four such functions:
+Given a black-box function `f: {0,1} → {0,1}`, we want to determine whether it's **constant** or **balanced**. There are only four such functions:
 
 | f(x)        | f(0) | f(1) | Type     |
 |-------------|------|------|----------|
@@ -39,7 +39,7 @@ qc = quantumcircuit(qubits=2)
 ```
 
 ### Step 3: Prepare the Initial State
-- Set qubit 1 (the output qubit) to \(|1\rangle\) via X gate.
+- Set qubit 1 (the output qubit) to `|1⟩` via X gate.
 - Apply Hadamard gates to both qubits to create superposition.
 ```python
 qc.x(1)
@@ -103,7 +103,7 @@ visualize.probability(qc)
 ---
 
 ## Deutsch-Jozsa Generalization
-To generalize for \( n > 1 \), initialize \( n \) input qubits and one output qubit:
+To generalize for `n > 1`, initialize `n` input qubits and one output qubit:
 ```python
 qc = quantumcircuit(qubits=4)  # 3 inputs + 1 output
 qc.x(3)
@@ -123,7 +123,9 @@ See the [Qiskit simulation example](https://learning.quantum.ibm.com/course/fund
 
 ## Notes
 - The Deutsch algorithm relies on **quantum interference**.
-- The output qubit is initialized to \(|1\rangle\) to enable phase kickback via the Hadamard basis.
+- The output qubit is initialized to `|1⟩` to enable phase kickback via the Hadamard basis.
 - The final Hadamard gate reveals the interference pattern in the input qubit.
 
 ---
+
+For deeper background, see lecture references and the original Qiskit examples in `cs385QC_2025sp_lect14_deutsch_qiskit.py` and `cs385QC_2025sp_lect14_deutschjozsa_qiskit.py`.
