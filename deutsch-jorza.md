@@ -87,5 +87,3 @@ This algorithm uses quantum parallelism and interference to drastically reduce t
 The Deutsch-Jozsa algorithm demonstrates the true potential of quantum speedup and serves as a foundation for more complex quantum algorithms.
 
 ---
-
-For comparison with the Qiskit version, see the Medium article: *Coding the Deutsch-Jozsa Algorithm in Qiskit by Avery Parkinson*.
