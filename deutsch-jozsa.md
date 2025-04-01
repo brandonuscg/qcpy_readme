@@ -85,9 +85,9 @@ visualize.qsphere(qc)
 ---
 
 ## Example Output
-Printed circuit: ![deutsch_circuit](screenshots/circuit_deutsch.png)
+- **Printed circuit:** ![deutsch_circuit](screenshots/circuit_deutsch.png)
 
-Probabiity: ![deutsch_probability](screenshots/Probability_Deutsch.png)
+- **Probabiity:** ![deutsch_probability](screenshots/Probability_Deutsch.png)
 
 
 ## Expected Results
