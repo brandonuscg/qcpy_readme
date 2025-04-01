@@ -19,7 +19,7 @@ This README provides a high-level overview. For in-depth documentation, visit th
 - [API Documentation](api_reference.md)
 - [Visualization Guide](visualization.md)
 - [Tutorial for First Quantum Circuit](tutorial.md)
-- [Deutsch-Jorza Algorithm Example](deutsch-jorza.md)
+- [Deutsch-Jozsa Algorithm Example](deutsch-jozsa.md)
 
 ---
 
