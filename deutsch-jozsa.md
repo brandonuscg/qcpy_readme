@@ -103,7 +103,7 @@ visualize.qsphere(qc)
 ---
 
 ## Summary
-This algorithm uses quantum parallelism and interference to drastically reduce the number of queries needed to classify black-box functions.
+This algorithm uses quantum superposition and interference to drastically reduce the number of queries needed to classify black-box functions.
 
 The Deutsch-Jozsa algorithm demonstrates the true potential of quantum speedup and serves as a foundation for more complex quantum algorithms.
 
