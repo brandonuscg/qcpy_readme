@@ -84,6 +84,12 @@ visualize.qsphere(qc)
 
 ---
 
+## Example Output
+Printed circuit: ![deutsch_circuit](screenshots/circuit_deutsch.png)
+
+Probabiity: ![deutsch_probability](screenshots/Probability_Deutsch.png)
+
+
 ## Expected Results
 - If the result is all `0`s (e.g., `000`), then the function is **constant**.
 - If the result is anything else (e.g., `101`, `110`, etc.), then the function is **balanced**.
