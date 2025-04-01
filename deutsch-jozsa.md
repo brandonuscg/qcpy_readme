@@ -95,4 +95,3 @@ The Deutsch-Jozsa algorithm demonstrates the true potential of quantum speedup a
 
 ---
 
-For comparison with the Qiskit version, see the Medium article: *Coding the Deutsch-Jozsa Algorithm in Qiskit by Avery Parkinson*.
