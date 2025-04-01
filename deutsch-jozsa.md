@@ -40,7 +40,7 @@ For example, with 3 input qubits, the function implemented returns 1 when an odd
 ```python
 def deutsch_jozsa(n=3, oracle_type="balanced"):
     total_qubits = n + 1
-    qc = quantumcircuit(qubits=total_qubits)
+    qc = quantumcircuit(total_qubits)
 
     # Step 1: Initialize output qubit to |1⟩
     qc.x(n)
@@ -57,8 +57,8 @@ def deutsch_jozsa(n=3, oracle_type="balanced"):
     # Step 4: Apply Hadamard to input register (first n qubits)
     qc.h(range(n))
 
-    # Step 5: Measure only the input register
-    measure(qc, qubits=range(n))
+    # Step 5: Measure the circuit
+    measure(qc)
 
     return qc
 ```
@@ -70,8 +70,16 @@ def deutsch_jozsa(n=3, oracle_type="balanced"):
 qc = deutsch_jozsa(n=3, oracle_type="balanced")
 
 print(qc)
-print(qc.state)
-visualize.probability(qc)
+
+measure(qc)
+
+results = qc.state
+
+print(results)
+
+visualize.probability(qc, save=True)
+
+visualize.qsphere(qc)
 ```
 
 ---
